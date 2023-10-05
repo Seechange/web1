@@ -125,6 +125,8 @@ function addInLove(id){
         })
         saveToLocalStorage();
         caculatorLove();
+    }else{
+        alert("Sản phẩm đã tồn tại !!!")
     }
 }
 
@@ -182,33 +184,98 @@ let listCard = document.querySelector('.listCard');
 // page gio hang
 function renderProductToCart(){
     listCard.innerHTML = '';
-    productInCart.map(value => {
+    productInCart.map((value,index) => {
             newDiv = document.createElement('li');
             newDiv.innerHTML = `
                 <div><img src="${value.image}" alt=""></div>
                 <div>${value.title}</div>
-                <div>${value.price.toLocaleString()} VNĐ </div>
+                <div>${(value.price*value.quantity).toLocaleString()} VNĐ </div>
                 <div>
-                    <button onclick="changeQuantity(${value.id}, ${value.quantity - 1})">-</button>
+                    <button onclick="minusQuantity(${index})", ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
-                    <button onclick="changeQuantity(${value.id}, ${value.quantity + 1})">+</button>
+                    <button onclick="plusQuantity(${index})", ${value.quantity + 1})">+</button>
                 </div>
-                <div class="trash"><i onclick="removeTrash(${value.id})" class="fa-solid fa-trash icon-trash"></i> </div>
+                <div class="trash"><i onclick="removeTrash(${index})" class="fa-solid fa-trash icon-trash"></i> </div>
             `;
 
             listCard.appendChild(newDiv);
     })
+    totalPriceCart()
 }
 
-function show(){
+function totalPriceCart(){
+    let total = 0;
+    if(productInCart != []){
+        for(let i = 0;i <productInCart.length;i++){
+            total += productInCart[i].price*productInCart[i].quantity;
+        }
+    }
+    document.querySelector(".total").innerHTML = total.toLocaleString() + " VND";
+}
+
+function plusQuantity(index) {
+    productInCart[index] = {
+        ...productInCart[index],
+        quantity: ++productInCart[index].quantity
+    }
+    saveToLocalStorage();
+    renderProductToCart();
+}
+
+function minusQuantity(index) {
+    if(productInCart[index].quantity > 1){
+        productInCart[index] = {
+            ...productInCart[index],
+            quantity: --productInCart[index].quantity
+        }
+        saveToLocalStorage();
+        renderProductToCart();
+    }else{
+        alert("Sản phẩm tối thiểu là 1 !!!")
+    }
+}
+
+function showCart(){
     document.querySelector(".card").style.display = "block";
     renderProductToCart();
 }
 
 function closed(){
     document.querySelector(".card").style.display = "none";
+    document.querySelector(".love").style.display = "none";
 }
 
-function removeTrash(id){
-    
+function removeTrash(index){
+   productInCart.splice(index,1);
+    saveToLocalStorage();
+    renderProductToCart();
+    indexLoadPage();
+}
+// page love
+let listLove = document.querySelector('.listFavorite');
+function renderProductToLove(){
+    listLove.innerHTML = '';
+    productInLove.map((value,index) => {
+        let newDiv = document.createElement('li');
+        newDiv.innerHTML = `
+            <div><img src="${value.image}" alt=""></div>
+            <div>${value.title}</div>
+            <div>${value.price.toLocaleString()} VNĐ </div>
+            <div>
+                <i onclick="removeLove(${index})" class="fa-sharp fa-solid fa-heart icon__heart"></i>
+            </div>
+    `;
+        listLove.appendChild(newDiv);
+    })
+}
+
+function showLove(){
+    document.querySelector(".love").style.display = "block";
+    renderProductToLove();
+}
+function removeLove(index){
+    productInLove.splice(index,1);
+    saveToLocalStorage();
+    renderProductToLove();
+    indexLoadPage();
 }

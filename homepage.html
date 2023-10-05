@@ -43,14 +43,14 @@
                     </div>
                 </li> -->
                 <li><i onclick="showLoginForm()" id="userlg" class="fa-solid fa-user icon"></i></li>
-                <li onclick="show()" class="header__nav-form-cart">
+                <li onclick="showCart()" class="header__nav-form-cart">
                     <i class="fa-sharp fa-solid fa-cart-shopping icon"></i>
                     <span id="totalCart" class="quanlity">0</span>
                     <div id="notify" class="card__nptify boxsd1">
                         <p>There are no products in the cart !</p>
                     </div>
                 </li>
-                <li class="header__nav__love">
+                <li onclick="showLove()" class="header__nav__love">
                     <i class="fa-sharp fa-solid fa-heart icon"></i>
                     <span id="totalLove" class="quanlity1">0</span>
                     <div id="notify1" class="card__nptify1 boxsd1">
@@ -75,7 +75,7 @@
 
                 </ul>
                 <div class="checkOut">
-                    <div class="closeLoving">Close
+                    <div onclick="closed()" class="closeLoving">Close
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                 </div>
 
             </div>
-            <div class="list-product">
+            <div class="list-product homepageList">
             </div>
 
         </div>
