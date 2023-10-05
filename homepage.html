@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KimiShop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.3.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="shortcut icon" href="./assets/img/Icon Img/Ariil-Alphabet-Letter-K.256.png" type="image/x-icon">
+
+</head>
+
+<body onload="indexLoadPage()" id="main1">
+    <div class="grid wide main">
+        <header class="header row no-gutter">
+            <div class="col l-3 header__logo">
+                <img class="" src="./assets/img/logo-1.jpg" alt="">
+            </div>
+            <ul class="col l-7 header__nav">
+                <li><a href="index.html" id="title">GIỚI THIỆU</a></li>
+                <li><a class="active" href="#" id="title">TRANG CHỦ</a></li>
+                <li><a href="listShoes.html" id="title">GIÀY</a></li>
+                <li><a href="listHandbag.html" id="title">TÚI XÁCH</a></li>
+                <li><a href="listMore.html" id="title">SẢN PHẨM KHÁC</a></li>
+                <li><a href="news.html" id="title">TIN TỨC</a></li>
+                <li><a href="contact.html" id="title">LIÊN HỆ</a></li>
+            </ul>
+            <ul class="col l-2 header__nav-icon">
+                <!-- <li class="header__nav-form-search">
+                    <i title="Xem thêm" class="fa-solid fa-magnifying-glass icon"></i>
+                    <div class="header__nav-search">
+                        <div class="row header__search-box">
+                            <input class="col l-10" type="text" placeholder="Search...">
+                            <i class=" col l-2 fa-solid fa-magnifying-glass icon"></i>
+                        </div>
+                    </div>
+                </li> -->
+                <li><i onclick="showLoginForm()" id="userlg" class="fa-solid fa-user icon"></i></li>
+                <li onclick="show()" class="header__nav-form-cart">
+                    <i class="fa-sharp fa-solid fa-cart-shopping icon"></i>
+                    <span id="totalCart" class="quanlity">0</span>
+                    <div id="notify" class="card__nptify boxsd1">
+                        <p>There are no products in the cart !</p>
+                    </div>
+                </li>
+                <li class="header__nav__love">
+                    <i class="fa-sharp fa-solid fa-heart icon"></i>
+                    <span id="totalLove" class="quanlity1">0</span>
+                    <div id="notify1" class="card__nptify1 boxsd1">
+                        <p>No favorite products!</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="card">
+                <h1>Card Products</h1>
+                <ul class="listCard">
+                </ul>
+                <div class="checkOut">
+                    <div class="total">0</div>
+                    <div onclick="closed()" id="close" class="closeShopping">Close
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="love">
+                <h1>Favorite Products</h1>
+                <ul class="listFavorite">
+
+                </ul>
+                <div class="checkOut">
+                    <div class="closeLoving">Close
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row no-gutters header-picture">
+            <img src="./assets/img/Your Skincare Saviors.png" alt="">
+        </div>
+        <div class="slider">
+            <div class="row banner__line1">
+                <div class="banner__line1-main col l-8">
+                    <div class="banner-slider">
+                        <img src="./assets/img/Slider/Thiết kế chưa có tên.png" alt="">
+                    </div>
+                </div>
+                <div class="col l-4 banner-line2">
+                    <div class="grid slider-sub-header">
+                        <div class="row no-gutters sub-slider">
+                            <img style="margin-bottom: 24px;" class="col l-12"
+                                src="./assets/img/Slider/K.i.m.i beauty co. (1).png" alt="">
+                            <img class="col l-12" src="./assets/img/Slider/K.i.m.i beauty co. (1).png" alt="">
+                        </div>
+                    </div>
+                    <!-- <div style="gap: 8px ;" class="grid banner-line2">
+                        <div class="row sub-slider">
+                        </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="slide-product">
+            <div class="product-modify boxsd1">
+                <img src="./assets/img/List-products/tuixach-removebg-preview (1).png" alt="">
+                <p class="product-name">
+                    Túi xách
+                </p>
+            </div>
+            <div class="product-modify boxsd1">
+                <img src="./assets/img/List-products/giay-cao-got-removebg-preview.png" alt="">
+                <p class="product-name">
+                    Giày
+                </p>
+            </div>
+            <div class="product-modify boxsd1">
+                <img src="./assets/img/List-products/SON-removebg-preview.png" alt="">
+                <p class="product-name">
+                    Son
+                </p>
+            </div>
+            <div class="product-modify boxsd1">
+                <img src="./assets/img/List-products/Nonmau-removebg-preview.png" alt="">
+                <p class="product-name">
+                    Nón
+                </p>
+            </div>
+            <div class="product-modify boxsd1">
+                <img src="./assets/img/List-products/aomau3-removebg-preview.png" alt="">
+                <p class="product-name">
+                    Áo
+                </p>
+            </div>
+            <div class="product-modify boxsd1">
+                <img src="./assets/img/List-products/quanmau1-removebg-preview.png" alt="">
+                <p class="product-name">
+                    Quần
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="popular-sale">
+                <div class="title-product">
+                    <div data-value="po" class="tab-item" id="active1">Popular products
+                    </div>
+                    <div data-value="ne" class="tab-item">New products</div>
+                    <div data-value="se" class="tab-item">Best-selling products</div>
+                </div>
+                <select name="" id="option-sort" class="" onchange="ascending()">
+                    <option value="default">Sort by default</option>
+                    <option value="az">A -> Z</option>
+                    <option value="za">Z -> A</option>
+                    <option value="tc">Giá thấp -> cao</option>
+                    <option value="ct">Giá cao -> thấp</option>
+                </select>
+                <div class="col l-4">
+                    <div style="float: right;" class="row header__search-box">
+                        <input oninput="searchProduct()" class="col l-10" type="text" placeholder="Search..."
+                            id="search">
+                        <i class=" col l-2 fa-solid fa-magnifying-glass icon"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="list-product">
+            </div>
+
+        </div>
+
+        <div class="near-footer">
+            <div class="row no-gutters near-footer__header">
+                <h3 class="col l-12">
+                    <marquee>Vì sao bạn nên chọn K.I.M.I BOUTIQUE</marquee>
+                </h3>
+            </div>
+            <div class="near-footer__content flex-container1">
+                <div class="content_section">
+                    <img src="./assets/img/Near footer/dichvu.jpg" alt="">
+                    <h4>Dịch vụ hỗ trợ</h4>
+                </div>
+                <div class="content_section">
+                    <img src="./assets/img/Near footer/price.jpg" alt="">
+                    <h4>Giá cả hợp lý</h4>
+                </div>
+                <div class="content_section">
+                    <img src="./assets/img/Near footer/uy-tin-tao-niem-tin.png" alt="">
+                    <h4>Uy tín chất lượng</h4>
+                </div>
+            </div>
+            <div class="gap-element"></div>
+            <div style="height:340px ;" class="row no-gutters introduce-news">
+                <div class="col l-1 header-introduce">
+                    <div class="col l-12 txt-news">
+                        <h3 style="text-transform: uppercase; rotate:-90deg ;" class="col l-12">Tin tức</h3>
+                    </div>
+                </div>
+                <div style="position: relative;" class="col l-11">
+                    <div class="swipper-btn next">
+                        <i onclick="changeNew('nextPage')" class="fa-solid fa-circle-arrow-right"></i>
+                        <!-- <i class="fa-regular fa-circle-arrow-right"></i> -->
+                    </div>
+                    <div class="flex-container1 prevPage">
+                        <div style="width:240px ;" class="col l-3  content_new">
+                            <img class="col l-12" src="./assets/img/News/New1.jpg" alt="">
+                            <a class="link-introduce"
+                                href="https://lifestyle.zingnews.vn/nu-gioi-nen-tu-chu-chi-tieu-du-kiem-nhieu-hay-it-post1402773.html">Nữ
+                                giới nên tự chủ chi tiêu dù kiếm nhiều hay ít</a>
+                        </div>
+                        <div style="width:240px ;" class="col l-3  content_new">
+                            <img class="col l-12" src="./assets/img/News/new2.jpg" alt="">
+                            <a class="link-introduce"
+                                href="https://zingnews.vn/goi-y-qua-tang-83-cho-chang-dang-bi-y-tuong-sau-valentine-post1359602.html">Gợi
+                                ý quà tặng 8/3 cho chàng đang 'bí' ý tưởng sau Valentine</a>
+                        </div>
+                        <!-- <div  style="width:240px ;" class=" col l-3  content_new">
+                            <img class="col l-12"  src="./assets/img/News/new2.jpg" alt="">
+                            <a class="link-introduce" href="https://zingnews.vn/7-mon-an-tu-hoa-anh-dao-post1410064.html">Món ăn từ hoa anh đào</a>
+                        </div> -->
+                        <div style="width:240px ;" class="col l-3  content_new">
+                            <img class="l-12" src="./assets/img/News/new3.jpg" alt="">
+                            <a class="link-introduce"
+                                href="https://zingnews.vn/loat-uu-dai-mua-2-giam-50-da-nganh-hang-tren-shopee-live-post1408461.html">Loạt
+                                ưu đãi mua 2 giảm 50% đa ngành hàng trên Shopee Live</a>
+                        </div>
+                        <div style="width:240px ;" class="col l-3  content_new">
+                            <img class="l-12" src="./assets/img/News/new4.jpg" alt="">
+                            <a class="link-introduce"
+                                href="https://zingnews.vn/tu-thuong-ban-than-voi-thang-luong-dau-tien-cua-nam-post1406297.html">Tự
+                                thưởng bản thân với tháng lương đầu tiên của năm</a>
+                        </div>
+                    </div>
+                    <div class="flex-container1 nextPage">
+                        <div style="width:240px ;" class="col l-3  content_new">
+                            <img class="col l-12" src="./assets/img/News/new2.jpg" alt="">
+                            <a class="link-introduce"
+                                href="https://zingnews.vn/goi-y-qua-tang-83-cho-chang-dang-bi-y-tuong-sau-valentine-post1359602.html">Gợi
+                                ý quà tặng 8/3 cho chàng đang 'bí' ý tưởng sau Valentine</a>
+                        </div>
+                        <!-- <div  style="width:240px ;" class=" col l-3  content_new">
+                            <img class="col l-12"  src="./assets/img/News/new2.jpg" alt="">
+                            <a class="link-introduce" href="https://zingnews.vn/7-mon-an-tu-hoa-anh-dao-post1410064.html">Món ăn từ hoa anh đào</a>
+                        </div> -->
+                        <div style="width:240px ;" class="col l-3  content_new">
+                            <img class="l-12" src="./assets/img/News/new4.jpg" alt="">
+                            <a class="link-introduce"
+                                href="https://zingnews.vn/tu-thuong-ban-than-voi-thang-luong-dau-tien-cua-nam-post1406297.html">Tự
+                                thưởng bản thân với tháng lương đầu tiên của năm</a>
+                        </div>
+                        <div style="width:240px ;" class="col l-3  content_new">
+                            <img class="l-12" src="./assets/img/News/new3.jpg" alt="">
+                            <a class="link-introduce"
+                                href="https://zingnews.vn/loat-uu-dai-mua-2-giam-50-da-nganh-hang-tren-shopee-live-post1408461.html">Loạt
+                                ưu đãi mua 2 giảm 50% đa ngành hàng trên Shopee Live</a>
+                        </div>
+                        <div style="width:240px ;" class="col l-3  content_new">
+                            <img class="col l-12" src="./assets/img/News/New1.jpg" alt="">
+                            <a class="link-introduce"
+                                href="https://lifestyle.zingnews.vn/nu-gioi-nen-tu-chu-chi-tieu-du-kiem-nhieu-hay-it-post1402773.html">Nữ
+                                giới nên tự chủ chi tiêu dù kiếm nhiều hay ít</a>
+                        </div>
+                    </div>
+                    <div class="swipper-btn prev">
+                        <i onclick="changeNew('prevPage')" class="fa-solid fa-circle-arrow-left"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="row no-gutters footer">
+            <div class="footer-info col l-4">
+                <img src="./assets/img/logo-1.jpg" alt="">
+                <p class="text__thanks">Your experience and joy are our honor. We hope that K.i.M.i boutique will have a
+                    long-lasting connection with you.</p>
+                <div class="footer-info-social">
+                    <i class="fa-brands fa-facebook icon"></i>
+                    <i class="fa-brands fa-instagram icon"></i>
+                    <i class="fa-brands fa-youtube icon"></i>
+                    <i class="fa-brands fa-twitter icon"></i>
+                    <i class="fa-brands fa-tiktok icon"></i>
+                    <i class="fa-solid fa-envelope icon"></i>
+                </div>
+            </div>
+            <div class="footer-contact col l-4">
+                <h3>ABOUT US</h3>
+                <i class="fa-solid fa-triangle"></i>
+                <div class="footer-contact__info">
+                    <div class="box-contact">
+                        <i class="fa-solid fa-map-location-dot icon"></i>
+                        <p>567/24/6 Nguyễn Ảnh Thủ, Phường Hiệp Thành, Quận 12, Tp.HCM</p>
+                    </div>
+                    <div class="box-contact">
+                        <i class="fa-solid fa-phone-volume icon"></i>
+                        <p>0762767356</p>
+                    </div>
+                    <div class="box-contact">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <p>danh.vo.2110@gmail.com <br>kimi050201@gmail.com</p>
+                    </div>
+                    <div class="box-contact">
+                        <i class="fa-brands fa-skype icon"></i>
+                        <p>Seechang IT</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contact col l-4">
+                <h3>ĐĂNG KÝ NHẬN TIN</h3>
+                <div class="footer-contact__info">
+                    <div class="box-contact">
+                        <input type="email" placeholder="Email...">
+                        <button class="btn_footer" type="submit">ĐĂNG KÝ</button>
+                    </div>
+                    <p style="margin: 12px 0px; line-height: 1.9rem; ">You may unsubscribe at any moment. For that
+                        purpose, please find our contact info in the legal notice.</p>
+                </div>
+            </div>
+        </footer>
+        <div class="row no-gutters copyright-footer">
+            © All rights reserved. Website design
+            <img src="./assets/img/S.png" alt="SeechangIT"> <a href="">SeeChange IT</a>
+        </div>
+    </div>
+    <script src="./js/cart.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+</body>
+
+</html>

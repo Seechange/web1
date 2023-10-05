@@ -1,0 +1,252 @@
+
+.header-picture img{
+    height: 550px;
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    margin: 20px 0px;
+}
+.slider{
+    margin: 30px 0px;
+}
+
+.banner__line1-main {
+    height: 400px;
+}
+.banner-slider img{
+    height: 380px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.sub-slider img{
+    height: 178px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.slide-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.product-modify{
+    width: 180px;
+    height: 190px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+}
+.product-modify img{
+    width: 100%;
+    height: 150px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    scale: 0.8;
+    cursor: pointer;
+}
+.product-modify img:hover{
+    transform: translateY(-10px);
+
+}
+.product-modify .product-name{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-top: -4px;
+    cursor: pointer;
+}
+/* content product */
+.popular-sale{
+    margin: 50px 0px;
+}
+.popular-sale h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+.list-product{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 18px;
+    column-gap: 18px;
+    /* justify-content: left; */
+}
+.product-detail{
+    width: 225px;
+    height: 500px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    text-align: center;
+    /* background: linear-gradient(to top,white 40%,pink 60%); */
+    overflow: hidden;
+    /* margin: auto; */
+}
+.list-product{
+
+}
+.list-product .product-demo{
+    background: linear-gradient(to top,white 40%,pink 60%);
+
+}
+.product-detail .tragop{
+    float:left;
+    margin: 12px 12px 0px 12px;
+    padding: 4px;
+    color: var(--text-color);
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.picture-product img{
+    width: 100%;
+    height: 290px;
+    scale: 0.8;
+    margin-top: -20px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.product__name{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 8px;
+    color: var(--text-color);
+    opacity: 0.9;
+    cursor: pointer;
+    min-height: 77px;
+}
+.product-detail .price{
+    font-size: 1.8rem;
+    color: #D0021C;
+    font-weight: 500;
+    margin: 8px;
+}
+.product-detail .vote{
+    font-size: 1.4rem;
+    color: #FB6B2E;
+}
+.result_label.temp1{
+    background: linear-gradient(to right,#ef3006,#c60004);
+}
+.result_label.temp2{
+    background: linear-gradient(to right,#faab08,#d42611);
+}
+.result_label.temp3{
+    background: linear-gradient(to right,#FF99CC,var(--primary-color)) ;
+}
+.result_label{
+    border-radius: 20px;
+    padding-right: 6px; 
+    color: var(--white-color);
+    height: 20px;
+    float: left;
+    margin: -25px 0px 0px 12px;
+    width: 110px;
+    max-width: 120px;
+   
+    
+}
+.result_label .img__icon{
+    border: 50%;
+    width: 26px;
+    height: 26px;
+    float: left;
+    margin: -3px 0px 0px -3px;
+    
+}
+.result_label span{
+    font-size: 1.1rem;
+    line-height: 20px;
+}
+
+/* box show like, cart, plus */
+.picture-product{
+    position: relative;
+}
+.picture-product:hover > img{
+    /* transform: translateY(-15px); */
+}
+.boxshow-liked{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    top: 40px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    /* background-color: var(--white-color);
+    opacity: 0.5; */
+    /* display: none; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* margin-left: 27px; */
+}
+.container-icon{
+    line-height: 250px;
+
+}
+.boxshow-liked i:hover{
+    font-size: 3.8rem;
+    /* color: var(--primary-color); */
+    color: red;
+}
+.boxshow-liked i{
+    font-size: 2.6rem;
+    /* background-color: red; */
+    font-weight: 1000;
+    color:var(--black-color);
+    margin: 0px 3px;
+    cursor: pointer;
+    
+}
+.picture-product:hover .boxshow-liked{
+    display: block;
+} 
+/* dieu huong left-right */
+.swipper-btn{
+    position: absolute;
+    width: 85px;
+    height: 70px;
+    background:linear-gradient(to right, rgba(255, 255, 255, 0), rgb(210, 210, 210));
+    z-index: 1;
+}
+.swipper-btn.next{
+    right: 7px;
+    top: 30%;
+}
+.swipper-btn.next i{
+    margin-left: 20px;
+}
+.swipper-btn.prev{
+    left: 7px;
+    top: 30%;
+}
+.swipper-btn.prev i{
+    margin-left: -20px;
+}
+.swipper-btn i{
+    font-size: 3.5rem;
+    text-align: center;
+    line-height: 70px;
+    width: 100%;
+    color: #3f3f3f;
+}
+.swipper-btn:hover i{
+    scale: 1.1;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+.nextPage{
+    display: none;
+}

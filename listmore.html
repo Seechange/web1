@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KimiShop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.3.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/list.css">
+    <link rel="shortcut icon" href="./assets/img/Icon Img/Ariil-Alphabet-Letter-K.256.png" type="image/x-icon">
+</head>
+
+<body id="main1">
+    <div class="grid wide main">
+        <header class="header row no-gutter">
+            <div class="col l-3 header__logo">
+                <img class="" src="./assets/img/logo-1.jpg" alt="">
+            </div>
+            <ul class="col l-7 header__nav">
+                <li><a href="index.html" href="" id="title">GIỚI THIỆU</a></li>
+                <li><a href="homepage.html" id="title">TRANG CHỦ</a></li>
+                <li><a href="listShoes.html" id="title">GIÀY</a></li>
+                <li><a href="listHandbag.html">TÚI XÁCH</a></li>
+                <li><a href="#" class="active">SẢN PHẨM KHÁC</a></li>
+                <li><a href="news.html">TIN TỨC</a></li>
+                <li><a href="contact.html">LIÊN HỆ</a></li>
+            </ul>
+            <ul class="col l-2 header__nav-icon">
+                <!-- <li class="header__nav-form-search">
+                    <i class="fa-solid fa-magnifying-glass icon"></i>
+                    <div class="header__nav-search">
+                        <div class="row header__search-box">
+                            <input class="col l-10" type="text" placeholder="Search...">
+                            <i class=" col l-2 fa-solid fa-magnifying-glass icon"></i>
+                        </div>
+                    </div>
+                </li> -->
+                <li><i onclick="showLoginForm()" class="fa-solid fa-user icon"></i></li>
+                <li class="header__nav-form-cart">
+                    <i class="fa-sharp fa-solid fa-cart-shopping icon"></i>
+                    <span class="quanlity">0</span>
+                    <div class="card__nptify boxsd1">
+                        <p>There are no products in the cart !</p>
+                    </div>
+                </li>
+                <li class="header__nav__love">
+                    <i class="fa-sharp fa-solid fa-heart icon"></i>
+                    <span class="quanlity1">0</span>
+                    <div class="card__nptify1 boxsd1">
+                        <p>No favorite products!</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="card">
+                <h1>Card Products</h1>
+                <ul class="listCard">
+                </ul>
+                <div class="checkOut">
+                    <div class="total">0</div>
+                    <div class="closeShopping">Close
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="love">
+                <h1>Favorite Products</h1>
+                <ul class="listFavorite">
+
+                </ul>
+                <div class="checkOut">
+                    <div class="closeLoving">Close
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="row content__picture">
+                <div class="swipper-btn btn btn-next">
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </div>
+                <img height="350px" class="l-12" src="./assets/img/Baner/Banner1.png" alt="">
+                <div class="swipper-btn btn  btn-prev">
+                    <i class="fa-solid fa-circle-arrow-left"></i>
+                </div>
+            </div>
+            <div class="row no-gutters content__cards">
+                <div class="l-3 card__subnav">
+                    <div class="filter__block">
+                        <h3 class="filter__title">Sản phẩm muốn xem</h3>
+                        <div class="filter__checklist">
+                            <div class="checklist__checkbox">
+                                <input type="checkbox" class="checkbox-Name" value="0"> <a href="" title="Tất cả">Tất
+                                    cả</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox" class="checkbox-Name" value="1"> <a href="" title="Nón">Nón</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox" class="checkbox-Name" value="2"> <a href="" title="Son">Son</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox" class="checkbox-Name" value="3"> <a href="" title="Áo">Áo</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox" class="checkbox-Name" value="4"> <a href="" title="Quần">Quần</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox" class="checkbox-Name" value="5"> <a href=""
+                                    title="Phụ kiện khác">Phụ kiện khác</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="filter__block">
+                        <h3 class="filter__title">Hãng sản xuất</h3>
+                        <div class="filter__checklist">
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Tất cả">Tất cả</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Converse">Converse</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Vans">Vans</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Adidas">Adidas</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Puma">Puma</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Skechers">Skechers</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__block">
+                        <h3 class="filter__title">Kiểu dáng</h3>
+                        <div class="filter__checklist">
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Tất cả">Tất cả</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Giày cao gót">Giày cao gót</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Giày sụt">Giày sục</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Dép Cross">Dép Cross</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Giày thể thao">Giày thể thao</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__block">
+                        <h3 class="filter__title">Giá cả</h3>
+                        <div class="filter__checklist">
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Tất cả">Tất cả</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="$200-$500">200$-500$</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="500$-700$">500$-700$</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="700$-1000$">700$-1000$</a>
+                            </div>
+                            <div class="checklist__checkbox">
+                                <input type="checkbox"> <a href="" title="Trên $1000">Trên 1000$</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="l-9 card__list">
+                    <div class="card__list__header">
+                        <h1>TÚI XÁCH <span class="totalProduct">0</span></h1>
+                    </div>
+                    <div class="card__list__required">
+                        <h2>TÚI XÁCH THEO YÊU CẦU</h2>
+                        <div class="required__lists">
+                            <div class="required__list">
+                                <img src="./assets/img/Required List/required tuixach/Đihcdilam.png" alt="">
+                                <a href="">Đi học, đi làm</a>
+                            </div>
+                            <div class="required__list">
+                                <img src="./assets/img/Required List/required tuixach/Dulichvafdatiec.png" alt="">
+                                <a href="">Du lịch, đại tiệc</a>
+                            </div>
+                            <div class="required__list">
+                                <img src="./assets/img/Required List/required tuixach/Thoitranghiendai.png" alt="">
+                                <a href="">Thời trang, hiện đại</a>
+                            </div>
+                            <div class="required__list">
+                                <img src="./assets/img/Required List/required tuixach/Phongcachxua.png" alt="">
+                                <a href="">Quá khứ, hồi ức</a>
+                            </div>
+                            <div class="required__list">
+                                <img src="./assets/img/Required List/required tuixach/Thuoghieusangtrong.png" alt="">
+                                <a href="">Giá trị, thương hiệu</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__list__item">
+                        <div class="list__item__tab">
+                            <span>Ưu tiên xem:</span>
+                            <div class="btn-group">
+                                <ul class="tab__filter">
+                                    <li class="tab-link active1"><a class="btn-link" href="">Bán chạy nhất</a></li>
+                                    <li class=" tab-link "><a class="btn-link" href="">Giá thấp</a></li>
+                                    <li class=" tab-link "><a class="btn-link" href="">Giá cao</a></li>
+                                    <li class=" tab-link "><a class="btn-link" href="">Ưu đãi online</a></li>
+                                </ul>
+                            </div>
+                            <div class="col l-4">
+                                <div style="float: right; padding: 0 8px;" class="row header__search-box">
+                                    <input class="col l-10" type="text" placeholder="Search...">
+                                    <i class=" col l-2 fa-solid fa-magnifying-glass icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="shoes" class="list-product">
+                            <!-- <div class="product-detail card__item">
+                                <p class="tragop">Trả góp 0%</p>
+                                <div class="picture-product">
+                                    <img src="" alt="">
+                                    <div class="result_label temp1">
+                                        <img class="img__icon" src="./assets/img/Icon Img/icon hotsale.png" alt="">
+                                        <span>Hàng giới hạn</span>
+                                    </div>
+                                </div>
+                                <h3 class="product__name">
+                                    Túi xách da nữ handmade VLS 560
+                                </h3>
+                                <p class="price"> <small></small></p>
+                                <p class="vote"><b></b> <i class="fa-regular fa-star"></i> ( )</p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="content__paging">
+                        <div class="page">
+                            <ul>
+                                <li class="fa-solid fa-circle-arrow-left btn__prev btn__active"></li>
+                                <div class="number-page" id="number-page">
+                                    <!-- <li class="active1"><a href="">1</a></li>
+                                    <li><a href="">2</a></li>
+                                    <li><a href="">3</a></li> -->
+                                </div>
+                                <li class="fa-solid fa-circle-arrow-right btn__next"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="row no-gutters footer">
+                <div class="footer-info col l-4">
+                    <img src="./assets/img/logo-1.jpg" alt="">
+                    <p class="text__thanks">Your experience and joy are our honor. We hope that K.i.M.i boutique will
+                        have a
+                        long-lasting connection with you.</p>
+                    <div class="footer-info-social">
+                        <i class="fa-brands fa-facebook icon"></i>
+                        <i class="fa-brands fa-instagram icon"></i>
+                        <i class="fa-brands fa-youtube icon"></i>
+                        <i class="fa-brands fa-twitter icon"></i>
+                        <i class="fa-brands fa-tiktok icon"></i>
+                        <i class="fa-solid fa-envelope icon"></i>
+                    </div>
+                </div>
+                <div class="footer-contact col l-4">
+                    <h3>ABOUT US</h3>
+                    <i class="fa-solid fa-triangle"></i>
+                    <div class="footer-contact__info">
+                        <div class="box-contact">
+                            <i class="fa-solid fa-map-location-dot icon"></i>
+                            <p>567/24/6 Nguyễn Ảnh Thủ, Phường Hiệp Thành, Quận 12, Tp.HCM</p>
+                        </div>
+                        <div class="box-contact">
+                            <i class="fa-solid fa-phone-volume icon"></i>
+                            <p>0762767356</p>
+                        </div>
+                        <div class="box-contact">
+                            <i class="fa-solid fa-envelope icon"></i>
+                            <p>danh.vo.2110@gmail.com <br>kimi050201@gmail.com</p>
+                        </div>
+                        <div class="box-contact">
+                            <i class="fa-brands fa-skype icon"></i>
+                            <p>Seechang IT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contact col l-4">
+                    <h3>ĐĂNG KÝ NHẬN TIN</h3>
+                    <div class="footer-contact__info">
+                        <div class="box-contact">
+                            <input type="email" placeholder="Email...">
+                            <button class="btn_footer" type="submit">ĐĂNG KÝ</button>
+                        </div>
+                        <p style="margin: 12px 0px; line-height: 1.9rem; ">You may unsubscribe at any moment. For that
+                            purpose, please find our contact info in the legal notice.</p>
+                    </div>
+                </div>
+            </footer>
+            <div class="row no-gutters copyright-footer">
+                © All rights reserved. Website design
+                <img src="./assets/img/S.png" alt="SeechangIT"> <a href="">SeeChange IT</a>
+            </div>
+        </div>
+        <script src="./js/more.js"></script>
+        <script src="./js/main.js"></script>
+</body>
+
+</html>

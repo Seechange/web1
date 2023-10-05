@@ -1,0 +1,114 @@
+.news{
+    margin: 30px 0px;
+}
+
+
+.news__list{
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+.news__new{
+    height:inherit;
+
+}
+.new__list-items{
+    width: 290px;
+    height: 320px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    /*  */
+}
+.new__list-items a{
+    text-decoration: none;
+
+}
+.new__list-items img{
+    width: inherit; 
+    height: 175px;
+}
+.items__name{
+    font-size: 1.6rem;
+    color: black;
+    line-height: 1.5;
+    min-height: 48px;
+    padding: 0px 12px;
+    text-align: justify;
+}
+.items__des{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    padding: 0px 12px;
+    text-align: justify;
+}
+
+.input__search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 0px 20px;
+}
+.input__search input{
+    padding-left: 8px;
+    height: 40px;
+    font-size: 1.5rem;
+    flex: 1;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.input__search div{
+    width: 40px;
+    background-color:red;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recent__post{
+    padding: 20px 0px 0px 20px;
+
+}
+.post__title{
+    /* padding-left: 20px; */
+}
+.post__title::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: #ccc;
+    margin-bottom: 16px;
+}
+.recent__post ul{
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.recent__post ul li{
+    list-style: none;
+    display: flex;
+    justify-content:start;
+    align-items:start;
+    margin: 8px 0px; 
+    column-gap: 12px;
+    font-size: 1.4rem;
+}
+.post__news div img{
+    width: 40px;
+    height:45px;
+}
+.recent__post ul div:nth-child(2){
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recent__post ul div:nth-child(2) a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+

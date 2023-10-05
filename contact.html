@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KimiShop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.3.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
+    <link rel="shortcut icon" href="./assets/img/Icon Img/Ariil-Alphabet-Letter-K.256.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="grid wide main">
+        <header class="header row no-gutter">
+            <div class="col l-3 header__logo">
+                <img class="" src="./assets/img/logo-1.jpg" alt="">
+            </div>
+            <ul class="col l-7 header__nav">
+                <li><a href="index.html" class="title">GIỚI THIỆU</a></li>
+                <li><a href="homepage.html" class="title">TRANG CHỦ</a></li>
+                <li><a href="listShoes.html" class="title">GIÀY</a></li>
+                <li><a href="listHandbag.html" class="title">TÚI XÁCH</a></li>
+                <li><a href="listMore.html" class="title">SẢN PHẨM KHÁC</a></li>
+                <li><a href="news.html" class="title">TIN TỨC</a></li>
+                <li><a href="#" class="title active">LIÊN HỆ</a></li>
+            </ul>
+            <ul class="col l-2 header__nav-icon">
+                <!-- <li class="header__nav-form-search">
+                    <i class="fa-solid fa-magnifying-glass icon"></i>
+                    <div class="header__nav-search">
+                        <div class="row header__search-box">
+                            <input class="col l-10" type="text" placeholder="Search...">
+                            <i class=" col l-2 fa-solid fa-magnifying-glass icon"></i>
+                        </div>
+                    </div>
+                </li> -->
+                <li><i onclick="showLoginForm()" class="fa-solid fa-user icon"></i></li>
+                <li class="header__nav-form-cart">
+                    <i class="fa-sharp fa-solid fa-cart-shopping icon"></i>
+                    <span class="quanlity">0</span>
+                    <div class="card__nptify boxsd1">
+                        <p>There are no products in the cart !</p>
+                    </div>
+                </li>
+                <li class="header__nav__love">
+                    <i class="fa-sharp fa-solid fa-heart icon"></i>
+                    <span class="quanlity1">0</span>
+                    <div class="card__nptify1 boxsd1">
+                        <p>No favorite products!</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="card">
+                <h1>Card Products</h1>
+                <ul class="listCard">
+                    <!-- <li>
+                        <div><img src="./assets/img/List-products/giay3-removebg-preview.png" alt=""></div>
+                        <div>Túi xách da nữ handmade VLS 560</div>
+                        <div>2.300.000 VNĐ</div>
+                        <div>
+                            <button>-</button>
+                            <div class="count">1</div>
+                            <button>+</button>
+                        </div>
+                    </li> -->
+                </ul>
+                <div class="checkOut">
+                    <div class="total">0</div>
+                    <div class="closeShopping">Close
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="love">
+                <h1>Favorite Products</h1>
+                <ul class="listFavorite">
+                    <!-- <li>
+                        <div><img src="./assets/img/List-products/giay3-removebg-preview.png" alt=""></div>
+                        <div>Túi xách da nữ handmade VLS 560</div>
+                        <div>2.300.000 VNĐ</div>
+                        <div>
+                            <button>-</button>
+                            <div class="count">1</div>
+                            <button>+</button>
+                        </div>
+                    </li> -->
+                </ul>
+                <div class="checkOut">
+                    <div class="closeLoving">Close
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="header__name">
+            <h1 class="header_name-trademark ">Contact With Us </h1>
+            <div class="header_name-disclaimer"></div>
+        </div>
+        <!-- <div class="banner__img">
+            <div class="row no-gutters banner__img-picture">
+                <img class="col l-12 " src="./assets/img/Baner/Banner1.png" alt="">
+            </div>
+        </div> -->
+        <div class="content__contact">
+            <div class=" l-4 left-contact">
+                <div class="info-contact">
+                    <div><i class="icon fa-solid  fa-location-dot"></i>
+                        <p>567/24/6 Nguyễn Ảnh Thủ Quận 12 TP Hồ Chí Minh</p>
+                    </div>
+                    <div><i class="icon fa-solid  fa-phone"></i>
+                        <p>0762767356</p>
+                    </div>
+                    <div><i class="icon fa-solid  fa-envelope"></i>
+                        <p> danh.vo.2110@gmail.com</p>
+                    </div>
+                    <div><i class="icon fa-brands  fa-facebook"></i><a
+                            href="https://www.facebook.com/profile.php?id=100013629300439"> Danh Võ</a></div>
+                </div>
+                <hr>
+                <div class="input-contact">
+                    <div>
+                        <p>Liên hệ với chúng tôi</p>
+                    </div>
+                    <div>
+                        <input class="input-text" type="text" placeholder="Họ và tên...">
+                    </div>
+                    <div>
+                        <input class="input-text" type="email" placeholder="Email...">
+                    </div>
+                    <div>
+                        <input class="input-text area" type="text" placeholder="Nội dung...">
+                    </div>
+                    <button type="submit">Gửi liên hệ</button>
+                </div>
+            </div>
+            <div class="l-8">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.0600209421636!2d106.6269468759502!3d10.883039557216314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d600875460af%3A0xf29c0378c3dea0da!2zNTY3IMSQLiBOZ3V54buFbiDhuqJuaCBUaOG7pywgSGnhu4dwIFRow6BuaCwgUXXhuq1uIDEyLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1681841699075!5m2!1svi!2s"
+                        width="100%" height="824px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer class="row no-gutters footer">
+            <div class="footer-info col l-4">
+                <img src="./assets/img/logo-1.jpg" alt="">
+                <p class="text__thanks">Your experience and joy are our honor. We hope that K.i.M.i boutique will have a
+                    long-lasting connection with you.</p>
+                <div class="footer-info-social">
+                    <i class="fa-brands fa-facebook icon"></i>
+                    <i class="fa-brands fa-instagram icon"></i>
+                    <i class="fa-brands fa-youtube icon"></i>
+                    <i class="fa-brands fa-twitter icon"></i>
+                    <i class="fa-brands fa-tiktok icon"></i>
+                    <i class="fa-solid fa-envelope icon"></i>
+                </div>
+            </div>
+            <div class="footer-contact col l-4">
+                <h3>ABOUT US</h3>
+                <i class="fa-solid fa-triangle"></i>
+                <div class="footer-contact__info">
+                    <div class="box-contact">
+                        <i class="fa-solid fa-map-location-dot icon"></i>
+                        <p>567/24/6 Nguyễn Ảnh Thủ, Phường Hiệp Thành, Quận 12, Tp.HCM</p>
+                    </div>
+                    <div class="box-contact">
+                        <i class="fa-solid fa-phone-volume icon"></i>
+                        <p>0762767356</p>
+                    </div>
+                    <div class="box-contact">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <p>danh.vo.2110@gmail.com <br>kimi050201@gmail.com</p>
+                    </div>
+                    <div class="box-contact">
+                        <i class="fa-brands fa-skype icon"></i>
+                        <p>Seechang IT</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contact col l-4">
+                <h3>ĐĂNG KÝ NHẬN TIN</h3>
+                <div class="footer-contact__info">
+                    <div class="box-contact">
+                        <input type="email" placeholder="Email...">
+                        <button class="btn_footer" type="submit">ĐĂNG KÝ</button>
+                    </div>
+                    <p style="margin: 12px 0px; line-height: 1.9rem; ">You may unsubscribe at any moment. For that
+                        purpose, please find our contact info in the legal notice.</p>
+                </div>
+            </div>
+        </footer>
+        <div class="row no-gutters copyright-footer">
+            © All rights reserved. Website design
+            <img src="./assets/img/S.png" alt="SeechangIT"> <a href="">SeeChange IT</a>
+        </div>
+    </div>
+    <div id="box-login" class="modal ">
+        <div class="modal-container">
+            <div class="row no-gutters modal__form">
+                <div onclick="closeForm()" class="modal__closed">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <img class="col l-6 modal__picture" height="500px" src="./assets/img/FormLogin/FormLoginAvatar.png"
+                    alt="">
+                <div id="box-sign-in" class="col l-6 modal__login">
+                    <h1 class="modal__login-headerText">
+                        USER LOGIN
+                    </h1>
+                    <div class="modal__login-body">
+                        <label for=""><i class="fa-solid fa-user"></i>User name</label>
+                        <input class="input username" type="text" placeholder="Email or user name..." autocomplete="off"
+                            autofocus />
+                        <label for=""><i class="fa-solid fa-key"></i>Password</label>
+                        <div class="form-txtpw">
+                            <input type="password" id="pw0" class="input password" placeholder="Enter password..."
+                                autocomplete="off" autofocus>
+                            <i onclick="showPassword('pw0')" class="fa-solid fa-eye icon-hidepw"></i>
+                            <button onclick="login()" type="submit" class="login-btn" id="btnLogin">Login <i
+                                    class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                    <div class="modal__login-footer">
+                        <span>Khách hàng mới ?<a onclick="showForm('box-sign-up')" class="sign-in " href="#"> Tạo tài
+                                khoản</a></span> <br>
+                        <span>Quên mật khẩu ?<a onclick="showForm('box-reset-pass')" class="reset-pass" href="#"> Khôi
+                                phục mật khẩu</a></span>
+                    </div>
+                </div>
+                <div id="box-sign-up" class="col l-6 modal__sign-in">
+                    <h1 class="modal__login-headerText">
+                        REGISTER
+                    </h1>
+                    <div class="modal__login-body">
+                        <label for=""><i class="fa-solid fa-user"></i>User name</label>
+                        <input class="input username" type="text" placeholder="Email or user name..." autocomplete="off"
+                            autofocus />
+                        <label for=""><i class="fa-solid fa-key"></i>Password</label>
+                        <div class="form-txtpw">
+                            <input type="password" id="pw" class="input password" placeholder="Enter password..."
+                                autocomplete="off" autofocus>
+                            <i onclick="showPassword('pw')" class="fa-solid fa-eye icon-hidepw"></i>
+                            <label for=""><i class="fa-solid fa-key"></i>Re-enter password</label>
+                            <input type="password" id="pw1" class="input password" placeholder="Enter password..."
+                                autocomplete="off" autofocus>
+                            <i onclick="showPassword('pw1')" class="fa-solid fa-eye icon-hidepw1"></i>
+                            <button onclick="login()" type="submit" class="login-btn" id="btnLogin">Sign up <i
+                                    class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                    <div class="modal__login-footer">
+                        <span>Bạn đã có tài khoản ?<a onclick="showForm('box-sign-in')" class="sign-in " href="#"> Đăng
+                                nhập</a></span> <br>
+                    </div>
+                </div>
+                <div id="box-reset-pass" class="col l-6 modal__resetpw">
+                    <h1 class="modal__login-headerText">
+                        FORGOT PASSWORD
+                    </h1>
+                    <div class="modal__login-body">
+                        <label for=""><i class="fa-solid fa-user"></i>User name</label>
+                        <input class="input username" type="text" placeholder="Email or user name..." autocomplete="off"
+                            autofocus />
+                        <label for=""><i class="fa-solid fa-key"></i>New password</label>
+                        <div class="form-txtpw">
+                            <input type="password" id="pw3" class="input password" placeholder="Enter password..."
+                                autocomplete="off" autofocus>
+                            <i onclick="showPassword('pw3')" class="fa-solid fa-eye icon-hidepw"></i>
+                            <label for=""><i class="fa-solid fa-key"></i>Confirm password</label>
+                            <input type="password" id="pw4" class="input password" placeholder="Enter password..."
+                                autocomplete="off" autofocus>
+                            <i onclick="showPassword('pw4')" class="fa-solid fa-eye icon-hidepw1"></i>
+                            <button onclick="login()" type="submit" class="login-btn" id="btnLogin">Confirm <i
+                                    class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                    <div class="modal__login-footer">
+                        <span>Bạn chưa có tài khoản ?<a onclick="showForm('box-sign-up')" class="sign-in " href="#">
+                                Đăng ký tài khoản</a></span> <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

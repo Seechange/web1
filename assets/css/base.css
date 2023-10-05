@@ -1,0 +1,25 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #3f3f3f;
+    --primary-color:#ffbfcd;
+    --hover-color:#b1949a;
+}
+
+*{
+    box-sizing: inherit;
+}
+.boxsd{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.boxsd1{
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
