@@ -330,7 +330,26 @@ function searchProduct(){
 function removeDiacritics(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
-
+const listProduct = products;
+console.log(listProduct);
 function sortWithBtn(){
-    
+    let x = document.querySelectorAll(".tab__filter > li")
+    for(let index = 0;index < x.length; index ++){
+        x[index].addEventListener("click", function(){
+            let data = x[index].getAttribute("data-value");
+            listProduct.sort((a,b) => {
+                if(data === "selling"){
+                    return b.totalrate - a.totalrate;
+                }else if(data === "min"){
+                    return a.price - b.price;
+                }else if(data === "max"){
+                    return b.price - a.price;
+                }else{
+                    return a.id - b.id ;
+                }
+            })
+            renderProduct(listProduct);
+        })
+    }
 }
+sortWithBtn()
