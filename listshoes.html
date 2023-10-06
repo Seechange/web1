@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="./assets/img/Icon Img/Ariil-Alphabet-Letter-K.256.png" type="image/x-icon">
 </head>
 
-<body id="main1">
+<body onload="indexLoadPage()" id="main1">
     <div class="grid wide main">
         <header class="header row no-gutter">
             <div class="col l-3 header__logo">
@@ -43,17 +43,17 @@
                     </div>
                 </li> -->
                 <li><i onclick="showLoginForm()" class="fa-solid fa-user icon"></i></li>
-                <li class="header__nav-form-cart">
+                <li onclick="showCart()" class="header__nav-form-cart">
                     <i class="fa-sharp fa-solid fa-cart-shopping icon"></i>
-                    <span class="quanlity">0</span>
-                    <div class="card__nptify boxsd1">
+                    <span id="totalCart" class="quanlity">0</span>
+                    <div id="notify" class="card__nptify boxsd1">
                         <p>There are no products in the cart !</p>
                     </div>
                 </li>
-                <li class="header__nav__love">
+                <li onclick="showLove()" class="header__nav__love">
                     <i class="fa-sharp fa-solid fa-heart icon"></i>
-                    <span class="quanlity1">0</span>
-                    <div class="card__nptify1 boxsd1">
+                    <span id="totalLove" class="quanlity1">0</span>
+                    <div id="notify1" class="card__nptify1 boxsd1">
                         <p>No favorite products!</p>
                     </div>
                 </li>
@@ -64,7 +64,7 @@
                 </ul>
                 <div class="checkOut">
                     <div class="total">0</div>
-                    <div class="closeShopping">Close
+                    <div onclick="closed()" class="closeShopping">Close
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
 
                 </ul>
                 <div class="checkOut">
-                    <div class="closeLoving">Close
+                    <div onclick="closed()" class="closeLoving">Close
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
@@ -200,27 +200,13 @@
                             <div class="col l-4">
                                 <div style="float: right; padding: 0 8px;" class="row header__search-box">
                                     <input oninput="searchProduct()" class="col l-10" type="text"
-                                        placeholder="Search...">
+                                        placeholder="Search... " id="search">
                                     <i class=" col l-2 fa-solid fa-magnifying-glass icon"></i>
                                 </div>
                             </div>
                         </div>
                         <div id="shoes" class="list-product">
-                            <!-- <div class="product-detail card__item">
-                                <p class="tragop">Trả góp 0%</p>
-                                <div class="picture-product">
-                                    <img src="" alt="">
-                                    <div class="result_label temp1">
-                                        <img class="img__icon" src="./assets/img/Icon Img/icon hotsale.png" alt="">
-                                        <span>Hàng giới hạn</span>
-                                    </div>
-                                </div>
-                                <h3 class="product__name">
-                                    Túi xách da nữ handmade VLS 560
-                                </h3>
-                                <p class="price"> <small></small></p>
-                                <p class="vote"><b></b> <i class="fa-regular fa-star"></i> ( )</p>
-                            </div> -->
+                            
                         </div>
                     </div>
                     <div class="content__paging">
@@ -292,9 +278,10 @@
                 <img src="./assets/img/S.png" alt="SeechangIT"> <a href="">SeeChange IT</a>
             </div>
         </div>
-        <script src="./js/list.js"></script>
-        <script src="./js/main.js"></script>
-        <script src="./js/product.js"></script>
+        <!-- <script src="./js/list.js"></script> -->
+        <!-- <script src="./js/main.js"></script>
+        <script src="./js/product.js"></script> -->
+        <script src="./js/shoes.js"></script>
         <!-- <script src="./js/cart.js"></script> -->
 </body>
 

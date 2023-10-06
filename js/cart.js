@@ -1,9 +1,10 @@
 let list = document.querySelector('.list-product')
 let listProduct = [];
+
 const productPopular = [
-    { id: 1, image: "./assets/img/List-products/Tui1-removebg-preview.png", imageSale: "icon hotsale.png", contentSale: "Hàng giới hạn", title: "Túi xách da nữ handmade VLS 560", price: 2300000, percent: 10, vote: 4.0, rating: 240 },
-    { id: 2, image: "./assets/img/List-products/tui3-removebg-preview.png", imageSale: "icon percent.png", contentSale: "Hot sale 30/4", title: "Túi đeo chéo nữ đẹp sang trọng da mềm PANIO SP17", price: 2100000, percent: 12, vote: 4.6, rating: 120 },
-    { id: 3, image: "./assets/img/List-products/guoc1-removebg-preview.png", imageSale: "icon discount.png", contentSale: "Giảm thêm 50k", title: "Giày Cao Gót GU2301", price: 379000, percent: 10, vote: 4.0, rating: 240 },
+    { id: 1, image: "./assets/img/List-products/Tui1-removebg-preview.png", imageSale: "icon hotsale.png", contentSale: "Hàng giới hạn", title: "Túi xách da nữ handmade VLS 560", price: 2300000, percent: 10, vote: 4.0, totalrate: 240 },
+    { id: 2, image: "./assets/img/List-products/tui3-removebg-preview.png", imageSale: "icon percent.png", contentSale: "Hot sale 30/4", title: "Túi đeo chéo nữ đẹp sang trọng da mềm PANIO SP17", price: 2100000, percent: 12, vote: 4.6, totalrate: 120 },
+    { id: 3, image: "./assets/img/List-products/guoc1-removebg-preview.png", imageSale: "icon discount.png", contentSale: "Giảm thêm 50k", title: "Giày Cao Gót GU2301", price: 379000, percent: 10, vote: 4.0, totalrate: 240 },
     { id: 4, image: "./assets/img/túi/túi_7-removebg-preview.png", imageSale: "icon hotsale.png", contentSale: "Hàng giới hạn", title: "Túi Xách Nhấn Dây Chuỗi Hạt Vân Đá  ", price: 895000, percent: 40, vote: 5.0, totalrate: 100 },
     { id: 5, image: "./assets/img/túi/túi_8-removebg-preview.png", imageSale: "icon hotsale.png", contentSale: "Hàng giới hạn", title: "Túi Đeo Vai Pedro Tweed Double Flap Shoulder Bag", price: 2090000, percent: 50, vote: 4.0, totalrate: 99 },
     { id: 6, image: "./assets/img/túi/túi_1-removebg-preview.png", imageSale: "icon hotsale.png", contentSale: "Giảm sốc", title: "Túi xách nữ kiêm đeo chéo sang trọng", price: 2800000, percent: 20, vote: 4.5, totalrate: 120 },
@@ -68,7 +69,7 @@ function renderProduct(array) {
             ${value.title}
         </h3>
         <p class="price">${value.price.toLocaleString()} VND <small>-${value.percent}%</small></p>
-        <p class="vote"><b>${value.vote.toFixed(1)}</b> <i class="fa-regular fa-star"></i> ( ${value.rating} )</p>    
+        <p class="vote"><b>${value.vote.toFixed(1)}</b> <i class="fa-regular fa-star"></i> ( ${value.totalrate} )</p>    
         `;
         list.appendChild(newDiv);
     })
@@ -109,7 +110,7 @@ function addInCart(id){
         let product = productInCart.find(value => value.id === id);
         productInCart[getIndex] = {
             ...product,
-            quantity: ++product.quantity
+            quantity: ++productInCart[getIndex].quantity
         }
         saveToLocalStorage();
         caculatorCart();
@@ -152,17 +153,21 @@ function indexLoadPage(){
 // search input
 
 function searchProduct(){
-    let valueIpnput = document.getElementById("search").value;
+    let valueInput = document.getElementById("search").value;
     let productSearch = listProduct.filter(value => {
-        return value.title.toUpperCase().includes(valueIpnput.toUpperCase());
+        let a = removeDiacritics(value.title).toUpperCase();
+        let b = removeDiacritics(valueInput).toUpperCase();
+        return a.includes(b);
     })
     list.innerHTML = "";
     renderProduct(productSearch);
 }
+function removeDiacritics(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
 
 function ascending(){
     let valueSelect = document.getElementById("option-sort").value;
-    console.log(listProduct);
     listProduct.sort((a,b) => {
         if(valueSelect === "az"){
             return a.title.localeCompare(b.title)
